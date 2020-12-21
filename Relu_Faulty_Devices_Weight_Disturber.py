@@ -149,7 +149,7 @@ while i <= 30:
   relu_type2_model.save_weights(relu_type2_filename)
   relu_type3_model.save_weights(relu_type3_filename)
 
-  relu_ith_accuracy = [var,var1,var2,var3]
+  relu_ith_accuracy = [var[1],var1[1],var2[1],var3[1]]
   relu_accuracy.append(relu_ith_accuracy)
   i += 1
 
@@ -157,8 +157,8 @@ with open("Relu_accuracy.csv","w",newline="") as f:
   thewriter = csv.writer(f)
   thewriter.writerow(["Undisturbed","Type1 disturbed","Type2 disturbed","Type3 disturbed"])
 
-  for i in range(1,30):
-    thewriter.writerow(relu_accuracy)
+  for i in range(0,30):
+    thewriter.writerow(relu_accuracy[i])
 
 
 
