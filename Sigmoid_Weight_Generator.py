@@ -45,6 +45,6 @@ while i<=30:
   # Save weights as file 
   filename = "Sigmoid_files/Sigmoid_model_" + str(i) + ".h5"
   model.save_weights(filename)
-  i =+ 1
+  i += 1
 
   
